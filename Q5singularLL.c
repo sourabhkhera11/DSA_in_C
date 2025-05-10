@@ -86,6 +86,46 @@ void search(int item){
         printf("Not found!");
     }
 }
+void remAllOcOfGivenEle(int item){
+    //First check head
+    while(head!=NULL && head->info==item){
+        struct node *temp=head;
+        head=head->next;
+        free(temp);
+    }
+    //remaining elements
+    struct node *ptr=head;
+    while(ptr!=NULL && ptr->next!=NULL){
+        if(ptr->next->info==item){
+            struct node *temp=ptr->next;
+            ptr->next=ptr->next->next;
+            free(temp);
+        }
+        //traverse only when item is not found 
+        else{
+            ptr=ptr->next;
+        }
+    }
+    printf("\nRemoved!");
+}
+void removeAllDuplicateEle(){
+    struct node *cur=head;
+    while(cur!=NULL && cur->next!=NULL){
+        struct node *ptr=cur;
+        while (ptr!=NULL && ptr->next!=NULL)
+        {
+            if(ptr->next->info ==cur->info){
+                struct node *temp=ptr->next;
+                ptr->next=ptr->next->next;
+                free(temp);
+            }
+            else{
+                ptr=ptr->next;
+            }
+        }
+        cur=cur->next;
+    }
+}
 void display(){
     if(head==NULL){
         printf("LL is empty!");
@@ -103,7 +143,7 @@ int main(){
     int choice=0;
     do{
         printf("\n-----------------Linear Linked List!------------------");
-        printf("\n1)Add to head\n2)Add to tail\n3)Delete from head\n4)Delete from tail\n5)search \n9)Display\n10)exit");
+        printf("\n1)Add to head\n2)Add to tail\n3)Delete from head\n4)Delete from tail\n5)search\n6)Remove all occurence of given element\n7)Remove all duplicate elements \n9)Display\n10)exit");
         printf("\nEnter you choice=");
         scanf("%d",&choice);
         int item;
@@ -129,6 +169,14 @@ int main(){
             printf("\nEnter the element to be searched=");
             scanf("%d",&item);
             search(item);
+            break;
+        case 6:
+            printf("\nEnter the element whose all occurence is to be deleted=");
+            scanf("%d",&item);
+            remAllOcOfGivenEle(item);
+            break;
+        case 7:
+            removeAllDuplicateEle();
             break;
         case 9:
             display();
