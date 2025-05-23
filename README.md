@@ -80,7 +80,7 @@ So I began curating and writing them myself. Over time, this turned into a full 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sourabhkhera11/EndGame.git
+   git clone https://github.com/sourabhkhera11/DSA_in_C.git
 2.Compile and run any .c file using GCC:
     gcc filename.c -o output
     ./ouput
