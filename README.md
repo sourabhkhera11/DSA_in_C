@@ -81,17 +81,20 @@ So I began curating and writing them myself. Over time, this turned into a full 
 1. Clone the repository:
    ```bash
    git clone
-
 2.Compile and run any .c file using GCC:
     gcc filename.c -o output
     ./ouput
     
-🤝 Contributions
+---
+
+##🤝 Contributions
 This repository is open for learning and collaboration. Feel free to:
 Fork it and try your own logic.
 Suggest improvements or bug fixes via pull requests.
 Extend the repo with more questions.
 
-📣 Connect with Me
-If you found this helpful or have suggestions, let’s connect on Sourabh Khera 💬
+---
+
+##📣 Connect with Me
+If you found this helpful or have suggestions, let’s connect on [Sourabh Khera](https://www.linkedin.com/in/sourabh-khera-356766227/) 💬
 I’d love to learn together and grow as part of this community!
