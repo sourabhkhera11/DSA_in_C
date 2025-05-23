@@ -210,7 +210,7 @@ void dfs(struct graph *g, int vertex,int visited[]){
     struct node *temp =g->adjList[vertex];
     while (temp!=NULL)
     {
-        int v=temp->vertex;
+        int v=temp->vertex-1; 
         if(visited[v]==0){
             dfs(g,v,visited);
         }
